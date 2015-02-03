@@ -53,4 +53,9 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  MarketPlaceApi::Applications.routes.draw do
+    namespace :api, defaults: { format: :json }, constraints: { subdomain: 'api'}, path: '/'  do
+      
+    end
+  end
 end
